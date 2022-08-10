@@ -69,7 +69,7 @@ public class Model_menu {
     }
     
     public Icon toIcon(){
-        return new ImageIcon("/paint/images/" +getIcon()+ ".png");
+        return new ImageIcon(getClass().getResource("/sammy/picture/icon/" +icon+ ".png"));
     }
     
 }

@@ -46,6 +46,7 @@ public class Menu extends javax.swing.JPanel {
         GradientPaint g7 = new GradientPaint(0, 0, new Color(124,121,114), 0, getHeight(), new Color(24,124,141), true);
         g2.setPaint(g7);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 23, 23);
+        g2.fillRect(getWidth()-23, 0, getWidth(), getHeight());
       
         super.paintComponent(g); 
     }

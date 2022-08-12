@@ -10,10 +10,12 @@ import java.awt.RenderingHints;
 
 
 public class Menu extends javax.swing.JPanel {
+    
+public EventMenuSelected event;
 
-    /**
-     * Creates new form Menu
-     */
+   public void addEventMenuSelected(EventMenuSelected event){
+      this.event=event;
+   } 
     public Menu() {
         initComponents();
         setOpaque(false);

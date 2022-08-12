@@ -2,6 +2,8 @@
 package Swing;
 
 import Model.Picture_model;
+import Model.Statustype;
+import components.Statustcarrier;
 import javax.swing.ImageIcon;
 
 
@@ -20,6 +22,8 @@ public class Body extends javax.swing.JPanel {
         picture_carrier1.addImagee(new Picture_model(new ImageIcon(getClass().getResource("/Picture/box/007.jpg")), "Buziness Ethics", "Building the two bridges"));
         picture_carrier1.addImagee(new Picture_model(new ImageIcon(getClass().getResource("/Picture/box/008.jpg")), "Buziness Ethics", "Building the two bridges"));
         picture_carrier1.addImagee(new Picture_model(new ImageIcon(getClass().getResource("/Picture/box/009.jpg")), "Buziness Ethics", "Building the two bridges"));
+   
+//        table1.addImage(new Object[]{"sdds", "sdds","sdd",Statustype.SUCCESS});
     }
 
   
@@ -31,7 +35,6 @@ public class Body extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         picture_carrier1 = new components.Picture_carrier();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table1 = new components.Table();
 
         setBackground(new java.awt.Color(235, 234, 242));
 
@@ -42,27 +45,6 @@ public class Body extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(78, 5, 63));
         jLabel2.setText("Yea it does");
-
-        table1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"sddsdsds", "sddsds", null, null, null},
-                {"dssdd", null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Name", "Surname", "Description", "Comments", "Statistics"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                true, true, false, false, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(table1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -105,6 +87,5 @@ public class Body extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private components.Picture_carrier picture_carrier1;
-    private components.Table table1;
     // End of variables declaration//GEN-END:variables
 }

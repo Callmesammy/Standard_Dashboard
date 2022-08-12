@@ -17,8 +17,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author user
  */
+
+
 public class ListMenuItem <E extends Object> extends JList<E>{
 
+    public EventMenuSelected event;
+
+   public void addEventMenuSelected(EventMenuSelected event){
+      this.event=event;
+   } 
+    
     private final DefaultListModel model;
     private int selectedindex = -1;
     private int overselected = -1; 
@@ -36,6 +44,9 @@ public class ListMenuItem <E extends Object> extends JList<E>{
                  Model_menu menu = (Model_menu)value;
                     if (menu.getType()==Model_menu.MenuType.MENU) {
                         selectedindex = index;
+                        if(event != null) {
+                          event.Selected(index);
+                        }
                     }else{
                         
                     }

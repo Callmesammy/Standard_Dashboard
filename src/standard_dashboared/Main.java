@@ -4,6 +4,7 @@
  */
 package standard_dashboared;
 
+import components.EventMenuSelected;
 import java.awt.Color;
 
 /**
@@ -15,6 +16,11 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+      public EventMenuSelected event;
+
+   public void addEventMenuSelected(EventMenuSelected event){
+      this.event=event;
+   } 
     public Main() {
         initComponents();
         setBackground(new Color(0,0,0,0));

@@ -1,11 +1,13 @@
 
 package components;
 
+import Model.Statustype;
 import java.awt.Color;
 import java.awt.Component;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 
 
 public class Table extends JTable{
@@ -38,10 +40,20 @@ public class Table extends JTable{
                          com.setForeground(new Color(100,150,121));
                      }
                      return com;
+                }else{
+                    Statustype type = (Statustype)value;
+                    Statustcarrier car = new Statustcarrier(type);
+                    return car;
                 }
-                return new JLabel("Testing");
+                
             }
         });
+        
+    }
+    
+   public void addImage(Object[] row){
+       DefaultTableModel model = (DefaultTableModel)getModel();
+       model.addRow(row);
         
     }
     
